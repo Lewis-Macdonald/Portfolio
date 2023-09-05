@@ -309,6 +309,7 @@ button {
 }
 
 .IndexItem {
+	height: 100%;
   background-color: white;
   text-decoration: none;
   background-image: none!important;
@@ -341,16 +342,11 @@ button {
     &:last-child {
       background-color: gray;
     }
-	>img {
+	> img {
 		max-width: 100%;
 		max-height: 100%;
-	}
+	};
   };
-}
-
-.IndexItem > div > img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .FlexStaticSize {
