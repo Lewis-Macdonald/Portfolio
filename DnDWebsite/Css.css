@@ -125,12 +125,16 @@ button {
   }
 }
 
+.ScrollGrid > * {
+	background-color: hsla(0,100%,100%,0.6);
+}
+
 .ScrollChoice {
+	background-color: hsla(0,100%,100%,0.6);
 	display: flex;
 	flex-direction: column;
 	> a {
 		flex-grow: 1;
-		background-color: hsla(0,100%,100%,0.6);
 	}
 	> *{
 		height:auto!important;
