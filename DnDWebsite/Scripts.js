@@ -1,3 +1,5 @@
+let BaseUrl = "/Portfolio/DnDWebsite";
+
 function ReadFile(name, callback)
 {
   console.log("Read file function");
@@ -68,7 +70,7 @@ function SwapScroll(title, file) {
 
 function PlaySnd()
 {
-  var audio = new Audio('/DnDWebsite/Sound/PaperShuffle.wav');
+  var audio = new Audio(BaseUrl+'Sound/PaperShuffle.wav');
   audio.play();
 }
 
