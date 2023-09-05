@@ -126,15 +126,18 @@ button {
 }
 
 .HoverableScroll {
-  &::after {
-    --alph: var(--alphmask);
-    mask: url('Images/ScrollClosed.png');
-    -webkit-mask-image: url('Images/ScrollClosed.png');
-  };
-  > a{
-    display: block;
-    background-image: url('Images/ScrollClosed.png');
-  };
+	&::after {
+		--alph: var(--alphmask);
+		mask: url('Images/ScrollClosed.png');
+		-webkit-mask-image: url('Images/ScrollClosed.png');
+	};
+	> a{
+		display: block;
+		background-image: url('Images/ScrollClosed.png');
+	};
+	> *{
+		height: 50%;!important
+	};
 }
 
 #ScrollClosed
