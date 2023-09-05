@@ -136,7 +136,7 @@ window.onresize = function()
 
 function InsertImages()
 {
-  var El = document.getElementsByClassName('Image')
+  var El = document.getElementsByClassName('UnaddedImage')
   console.log(El);
   for (const element of El)
   {
