@@ -11,7 +11,7 @@ window.onload = function()
   //el.removeChild(el.firstElementChild);
   //console.log(el.innerHTML);
   newdoctitle = divplace.getAttribute('data-doctitle');
-  newdoctxt = divplace.getAttribute('data-doctxt');
+  newdoctxt = BaseUrl + divplace.getAttribute('data-doctxt');
   ReadFile("ScrollTemplate.html", function(TemplateContent)
   {
     content = TemplateContent;
