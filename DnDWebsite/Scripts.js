@@ -140,6 +140,7 @@ function InsertImages()
   console.log(El);
   for (const element of El)
   {
+    element.classList.remove('UnaddedImage');
     console.log(element);
     var Src = element.src;
     console.log(Src);
