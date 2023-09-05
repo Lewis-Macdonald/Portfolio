@@ -141,9 +141,9 @@ function InsertImages()
   for (const element of El)
   {
     console.log(element);
-    var Src = element.style.src;
+    var Src = element.src;
     console.log(Src);
-    element.style.src = BaseUrl + Src;
+    element.src = BaseUrl + Src;
   }
   /*for (let i = 0; i < Img.length; i++) {
     ImgSrc = Img[i].style.src;
