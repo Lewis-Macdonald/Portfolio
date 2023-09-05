@@ -137,7 +137,8 @@ window.onresize = function()
 
 function InsertImages()
 {
-  let Img = document.getElementsByClassName("Image");
+  let Img = document.querySelectorAll('.Image').
+  
   Img.forEach((element) => (element.style.src = BaseUrl + element.style.src));
   /*for (let i = 0; i < Img.length; i++) {
     ImgSrc = Img[i].style.src;
