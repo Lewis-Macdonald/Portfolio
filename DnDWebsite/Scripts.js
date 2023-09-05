@@ -1,4 +1,4 @@
-let BaseUrl = "/Portfolio/DnDWebsite";
+let BaseUrl = "/Portfolio/DnDWebsite/";
 
 function ReadFile(name, callback)
 {
