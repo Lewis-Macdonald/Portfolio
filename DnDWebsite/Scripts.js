@@ -140,11 +140,12 @@ function InsertImages()
   console.log(El);
   for (const element of El)
   {
-    element.classList.remove('UnaddedImage');
     console.log(element);
-    var Src = element.src;
+    var Src = element.getAttribute('data-src');
     console.log(Src);
     element.src = BaseUrl + Src;
+    element.classList.remove('UnaddedImage');
+    element.removeAttribute('data-src');
   }
   /*for (let i = 0; i < Img.length; i++) {
     ImgSrc = Img[i].style.src;
