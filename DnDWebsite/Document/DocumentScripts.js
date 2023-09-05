@@ -27,6 +27,8 @@ window.onload = function()
   //el.removeAttributeNode(el.attributes[0]);el.removeAttributeNode(el.attributes[0]);
   //el.id = ""
   console.log("Loaded JS");
+
+  InsertImages();
 };
 
 function ReadScroll()
