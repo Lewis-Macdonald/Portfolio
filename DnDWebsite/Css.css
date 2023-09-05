@@ -125,10 +125,19 @@ button {
   }
 }
 
-.HoverableScroll {
-	background-color: hsla(0,100%,100%,0.6);
+.ScrollChoice {
 	display: flex;
 	flex-direction: column;
+	> a {
+		flex-grow: 1;
+	}
+	> *{
+		height:auto!important;
+	}
+}
+
+.HoverableScroll {
+	background-color: hsla(0,100%,100%,0.6);
 	&::after {
 		--alph: var(--alphmask);
 		mask: url('Images/ScrollClosed.png');
