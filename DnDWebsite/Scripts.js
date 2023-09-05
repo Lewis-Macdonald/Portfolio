@@ -40,6 +40,8 @@ function ReadFile(name, callback)
 
   // send the request
   xhr.send();
+
+  InsertImages();
 }
 
 function SwapScroll(title, file) {
@@ -131,4 +133,14 @@ function StyleToInt(el, property_name)
 window.onresize = function()
 {
   ScaleText("TextScale");
+}
+
+function InsertImages()
+{
+  let Img = document.getElementsByClassName("Image");
+  Img.forEach((element) => (element.style.src = BaseUrl + element.style.src));
+  /*for (let i = 0; i < Img.length; i++) {
+    ImgSrc = Img[i].style.src;
+    Img[i].style.src = BaseUrl + ImgSrc;
+  }*/
 }
