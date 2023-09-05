@@ -130,10 +130,12 @@ button {
 }
 
 .ScrollChoice {
-	background-color: hsla(0,100%,100%,0.4);
+	height:100%;
+	margin: 5px 0;
 	display: flex;
 	flex-direction: column;
 	> a {
+		background-color: hsla(0,100%,100%,0.4);
 		flex-grow: 1;
 	}
 	> *{
@@ -143,6 +145,7 @@ button {
 		
 		>* {
 			height:auto!important;
+			width: 100%;
 		};
 		>summary {
 			padding: 4px;
