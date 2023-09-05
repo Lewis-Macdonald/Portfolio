@@ -149,7 +149,6 @@ button {
 		};
 		>summary {
 			padding: 4px;
-			width: 200px;
 			background-color: #eeeeee;
 			border: none;
 			box-shadow: 1px 1px 2px #bbbbbb;
@@ -241,6 +240,7 @@ button {
 }
 
 .BackgroundScale {
+	display: block;
 	width: auto;
 	height: auto;
 	background-size: contain;
@@ -275,24 +275,25 @@ button {
 }
 
 #Logbook {
-  max-height:100%;
-  max-width:1000px;
-  background-color:brown;
-  width:100%;
-  &::before {
-    padding-bottom: 75%;
-  };
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  };
-  .Grid-container {
-    max-height: 100%;
-  };
-  .Grid-item {
-    background-color: white;
-  };
+	width: 100%;
+	max-height:100%;
+	max-width:1000px;
+	background-color:brown;
+	width:100%;
+	&::before {
+	padding-bottom: 75%;
+	};
+	> div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	};
+	.Grid-container {
+	max-height: 100%;
+	};
+	.Grid-item {
+	background-color: white;
+	};
 }
 
 #Documents {
@@ -308,7 +309,7 @@ button {
 }
 
 .IndexItem {
-  color: white;
+  background-color: white;
   text-decoration: none;
   background-image: none!important;
   display: flex;
@@ -340,6 +341,10 @@ button {
     &:last-child {
       background-color: gray;
     }
+	>img {
+		max-width: 100%;
+		max-height: 100%;
+	}
   };
 }
 
@@ -349,5 +354,13 @@ button {
 }
 
 .FlexStaticSize {
-  flex: none!important;
+	flex: none!important;
+	bottom: 0;
+	float: bottom;
+	display: block;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	width: fit-content;
 }
