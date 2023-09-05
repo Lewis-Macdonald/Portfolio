@@ -130,6 +130,7 @@ button {
 	flex-direction: column;
 	> a {
 		flex-grow: 1;
+		background-color: hsla(0,100%,100%,0.6);
 	}
 	> *{
 		height:auto!important;
@@ -137,20 +138,11 @@ button {
 }
 
 .HoverableScroll {
-	background-color: hsla(0,100%,100%,0.6);
+	background-image: url('Images/ScrollClosed.png');
 	&::after {
 		--alph: var(--alphmask);
 		mask: url('Images/ScrollClosed.png');
 		-webkit-mask-image: url('Images/ScrollClosed.png');
-		height: 50%!important;
-	};
-	> a{
-		display: block;
-		background-image: url('Images/ScrollClosed.png');
-		flex-grow: 1;
-	};
-	> *{
-		height: auto!important;
 	};
 }
 
