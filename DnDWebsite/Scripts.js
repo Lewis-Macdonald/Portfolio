@@ -40,8 +40,6 @@ function ReadFile(name, callback)
 
   // send the request
   xhr.send();
-
-  InsertImages();
 }
 
 function SwapScroll(title, file) {
@@ -64,6 +62,7 @@ function SwapScroll(title, file) {
     }, 200);
     setTimeout(function() {
       el = document.getElementById("ScrollText");
+      InsertImages();
       ScaleText("TextScale");
       //el.classList.remove('transparent');
     }, 200);
