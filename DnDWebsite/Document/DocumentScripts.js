@@ -2,6 +2,8 @@ var newdoctitle = "";
 var newdoctxt = '';
 
 addEventListener("load", (event) => {
+  let html = document.querySelector('html');
+  InsertHTML(html.getAttribute('data-doctitle'), html.getAttribute('data-doctxt'));
   let el = document.body;
   let divplace = el.firstElementChild;
   let scriptplace = el.getElementsByTagName('div')[1];
@@ -25,6 +27,9 @@ function InsertHTML(doctitle, doctxt) {
   ReadFile("GenericLetter.html", function(Information) {
     console.log("Loaded Letter template");
     document.querySelector('html').innerHTML = Information;
+    let scriptplace = document.body.getElementsByTagName('div')[0];
+    scriptplace.setAttribute('data-doctitle',doctitle);
+    scriptplace.setAttribute('data-doctxt',doctxt);
   })
 }
 
