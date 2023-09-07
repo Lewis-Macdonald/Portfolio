@@ -23,8 +23,8 @@ addEventListener("load", (event) => {
 
 function InsertHTML(doctitle, doctxt) {
   ReadFile("GenericLetter.html", function(Information) {
-    
-    document.body.innerHTML = "";
+    console.log("Loaded Letter template");
+    document.querySelector('html').innerHTML = Information;
   })
 }
 
