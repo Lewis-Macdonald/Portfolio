@@ -3,7 +3,9 @@ var newdoctxt = '';
 
 addEventListener("load", (event) => {
   let html = document.querySelector('html');
-  InsertHTML(html.getAttribute('data-doctitle'), html.getAttribute('data-doctxt'));
+  newdoctitle = html.getAttribute('data-doctitle');
+  newdoctxt = html.getAttribute('data-doctxt');
+  InsertHTML(newdoctitle, newdoctxt);
   let el = document.body;
   let divplace = el.firstElementChild;
   let scriptplace = el.getElementsByTagName('div')[1];
@@ -12,7 +14,7 @@ addEventListener("load", (event) => {
   //el.removeChild(el.firstElementChild);
   //console.log(el.innerHTML);
   newdoctitle = divplace.getAttribute('data-doctitle');
-  newdoctxt = BaseUrl + divplace.getAttribute('data-doctxt');
+  newdoctxt = BaseUrl + newdoctxt;
   ReadFile("ScrollTemplate.html", function(TemplateContent){
     content = TemplateContent;
     let scripts = scriptplace.innerHTML;
