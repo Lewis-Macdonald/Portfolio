@@ -26,10 +26,13 @@ addEventListener("load", (event) => {
 function InsertHTML(doctitle, doctxt) {
   ReadFile("GenericLetter.html", function(Information) {
     console.log("Loaded Letter template");
-    document.querySelector('html').innerHTML = Information;
+    let html = document.querySelector('html');
+    html.innerHTML = Information;
     let scriptplace = document.body.getElementsByTagName('div')[0];
     scriptplace.setAttribute('data-doctitle',doctitle);
     scriptplace.setAttribute('data-doctxt',doctxt);
+    html.removeAttribute('data-doctitle');
+    html.removeAttribute('data-doctxt');
   })
 }
 
