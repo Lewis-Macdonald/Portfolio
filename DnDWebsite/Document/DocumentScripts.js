@@ -6,23 +6,6 @@ addEventListener("load", (event) => {
   newdoctitle = html.getAttribute('data-doctitle');
   newdoctxt = html.getAttribute('data-doctxt');
   InsertHTML(newdoctitle, newdoctxt);
-  let el = document.body;
-  let divplace = el.firstElementChild;
-  let scriptplace = el.getElementsByTagName('div')[1];
-  let content = ""
-  //console.log(content);
-  //el.removeChild(el.firstElementChild);
-  //console.log(el.innerHTML);
-  //newdoctitle = divplace.getAttribute('data-doctitle');
-  newdoctxt = BaseUrl + newdoctxt;
-  ReadFile("ScrollTemplate.html", function(TemplateContent){
-    content = TemplateContent;
-    let scripts = scriptplace.innerHTML;
-    //console.log(scripts);
-    content += scripts;
-    //console.log(content);
-    el.innerHTML = content;
-  });
 })
 
 function InsertHTML(doctitle, doctxt) {
@@ -35,6 +18,24 @@ function InsertHTML(doctitle, doctxt) {
     scriptplace.setAttribute('data-doctxt',doctxt);
     html.removeAttribute('data-doctitle');
     html.removeAttribute('data-doctxt');
+    //break//
+    let el = document.body;
+    let divplace = el.firstElementChild;
+    let scriptplace = el.getElementsByTagName('div')[1];
+    let content = ""
+    //console.log(content);
+    //el.removeChild(el.firstElementChild);
+    //console.log(el.innerHTML);
+    //newdoctitle = divplace.getAttribute('data-doctitle');
+    newdoctxt = BaseUrl + newdoctxt;
+    ReadFile("ScrollTemplate.html", function(TemplateContent){
+      content = TemplateContent;
+      let scripts = scriptplace.innerHTML;
+      //console.log(scripts);
+      content += scripts;
+      //console.log(content);
+      el.innerHTML = content;
+    });
   })
 }
 
