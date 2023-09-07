@@ -13,6 +13,7 @@ function InsertHTML(doctitle, doctxt) {
     console.log("Loaded Letter template");
     let html = document.querySelector('html');
     html.innerHTML = Information;
+    //break//
     let scriptplace = document.body.getElementsByTagName('div')[0];
     scriptplace.setAttribute('data-doctitle',doctitle);
     scriptplace.setAttribute('data-doctxt',doctxt);
@@ -20,8 +21,9 @@ function InsertHTML(doctitle, doctxt) {
     html.removeAttribute('data-doctxt');
     //break//
     let el = document.body;
-    let divplace = el.firstElementChild;
-    let scriptplace = el.getElementsByTagName('div')[1];
+    let divplace = scriptplace;
+    //let divplace = el.firstElementChild;
+    //let scriptplace = el.getElementsByTagName('div')[1];
     let content = ""
     //console.log(content);
     //el.removeChild(el.firstElementChild);
