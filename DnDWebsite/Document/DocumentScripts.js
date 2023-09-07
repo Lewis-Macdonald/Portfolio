@@ -13,7 +13,7 @@ addEventListener("load", (event) => {
   //console.log(content);
   //el.removeChild(el.firstElementChild);
   //console.log(el.innerHTML);
-  newdoctitle = divplace.getAttribute('data-doctitle');
+  //newdoctitle = divplace.getAttribute('data-doctitle');
   newdoctxt = BaseUrl + newdoctxt;
   ReadFile("ScrollTemplate.html", function(TemplateContent){
     content = TemplateContent;
