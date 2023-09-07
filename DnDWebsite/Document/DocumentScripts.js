@@ -53,10 +53,10 @@ function InsertHTML(doctitle, doctxt) {
   //el.innerHTML = content;
   //el.removeAttributeNode(el.attributes[0]);el.removeAttributeNode(el.attributes[0]);
   //el.id = ""
-  console.log("Loaded JS");
+  /*console.log("Loaded JS");
 
   InsertImages();
-};
+};*/
 
 function ReadScroll()
 {
