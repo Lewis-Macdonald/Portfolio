@@ -19,6 +19,7 @@ function InsertHTML(doctitle, doctxt) {
     scriptplace.setAttribute('data-doctxt',doctxt);
     html.removeAttribute('data-doctitle');
     html.removeAttribute('data-doctxt');
+    /*
     //break//
     let el = document.body;
     let divplace = scriptplace;
@@ -37,7 +38,7 @@ function InsertHTML(doctitle, doctxt) {
       content += scripts;
       //console.log(content);
       el.innerHTML = content;
-    });
+    });*/
   })
 }
 
