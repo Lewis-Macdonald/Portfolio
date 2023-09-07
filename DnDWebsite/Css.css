@@ -165,6 +165,8 @@ button {
 
 .HoverableScroll {
 	background-image: url('Images/ScrollClosed.png');
+	background-size: contain;
+   	background-repeat: no-repeat;
 	&::after {
 		--alph: var(--alphmask);
 		mask: url('Images/ScrollClosed.png');
