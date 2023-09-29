@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<style>
+nav {
+	background: blue;
+    width: min-content;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav > div {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  width: 100%;
+}
+
+nav > div >div {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: auto;
+  flex-grow: 1;
+}
+
+a {
+ color: black;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+section {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+section > div {
+	width: 50%;
+    height: 100%;
+    float: left;
+}
+
+section > div + div {
+	float: right;
+}
+
+section > div > div{
+	width: 100%;
+    height: 50%;
+}
+
+div:has(h1) {
+	position: relative;
+}
+
+section > div h1 {
+	margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    height: fit-content;
+}
+
+</style>
+</head>
+<body>
+  <nav>
+  	<div>
+     <div>
+       Logo
+     </div>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Connections</a></li>
+	  <li><a href="#">Connections</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div>
+    <h1><p>Hi</p><p>I'm Lewis Macdonald</p><p>Welcome to my portfolio</p></h1>
+    </div>
+    <div>
+      <div>
+		<h1><p>Full-Stack developer</p></h1>
+      </div>
+      <div>
+		<h1><p>Programmer</p></h1>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
