@@ -3,9 +3,30 @@
 <head>
 <title></title>
 <style>
+:root {
+  --barw: calc(160px);
+  --sideg: calc(var(--barw) + 5vw);
+}
+
+* {
+	opacity: 1;
+	/*opacity: 0.95;*/
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, a, body, html, head, title, style)
+{
+    opacity: initial;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+}
+
 nav {
-	background: blue;
-    width: min-content;
+	/*background: blue;*/
+    width: var(--barw);
     height: 100%;
     position: fixed;
     top: 0;
@@ -19,9 +40,10 @@ nav > div {
   aspect-ratio: 1 / 1;
   position: relative;
   width: 100%;
+  background: blue;
 }
 
-nav > div >div {
+nav > div > div {
   margin: auto;
   top: 0;
   bottom: 0;
@@ -33,13 +55,15 @@ nav > div >div {
 }
 
 ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: auto;
-  flex-grow: 1;
+	background: rgba(0,0,255,0.5);
+    background-opacity: 0.5;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    height: auto;
+    flex-grow: 1;
 }
 
 a {
@@ -51,6 +75,9 @@ a {
 section {
     width: 100%;
     aspect-ratio: 2 / 1;
+    padding: 0 var(--sideg);
+    box-sizing: border-box;
+    background-color: green;
 }
 
 section > div {
@@ -68,8 +95,28 @@ section > div > div{
     height: 50%;
 }
 
-div:has(h1) {
+section div:has(> h1) {
 	position: relative;
+}
+
+section div:has(> h1):hover:before {
+	opacity: 1;
+}
+
+section div:has(> h1):before {
+	content: "";
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: opacity .5s linear;
+}
+
+@keyframes flash {
+  to {opacity: 0.5;}
 }
 
 section > div h1 {
