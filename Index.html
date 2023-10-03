@@ -33,7 +33,6 @@ nav {
     left: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 nav > div {
@@ -54,16 +53,105 @@ nav > div > div {
   position: absolute;
 }
 
-ul {
-	background: rgba(0,0,255,0.5);
+nav > div + div {
+	flex-grow: 1;
+    background: rgba(0,0,255,0.5);
     background-opacity: 0.5;
+}
+
+ul {
+	position: absolute;
     list-style-type: none;
-    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [first] 1fr [line2] auto [line3] 1fr;
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    height: auto;
-    flex-grow: 1;
+    /*padding: 10% 0;*/
+    /*width: min-content;*/
+    margin: auto;
+    background: rgba(0,0,255,0.5);
+    left: 0;
+    right: 0;
+}
+
+li {
+	padding: 0.5em;
+	width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+ul > div,  ul li {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+ul > div:before,  ul li:before{
+	content: "";
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: opacity .5s linear;
+}
+
+/*Left nav bar*/
+div:has(+ li):hover:before {
+	opacity: 0.5;
+}
+
+div:has(+ li:hover):before{
+	opacity: 0.5;
+}
+
+div:has(+ li + div:hover):before{
+	opacity: 0.5;
+}
+
+/*right nav bar*/
+
+div + li + div:hover:before {
+	opacity: 0.5;
+}
+
+div + li:hover + div:before {
+	opacity: 0.5;
+}
+
+div:hover + li + div:before {
+	opacity: 0.5;
+}
+
+/*centre nav bar*/
+
+div:has(+ li):hover + li:before {
+	opacity: 0.5;
+}
+
+div:has(+ li) + li:hover:before {
+	opacity: 0.5;
+}
+
+div:has(+ li) + li:has(+ div:hover):before {
+	opacity: 0.5;
+}
+
+li a {
+	position: inherit;
+}
+
+nav > div > ul + ul {
+	width: fit-content;
 }
 
 a {
@@ -76,7 +164,7 @@ section {
 	width: 100%;
 	max-height: 100%;
 	aspect-ratio: 2 / 1;
-	padding: 0 var(--sideg);
+	/*padding: 0 var(--sideg);*/
 	box-sizing: border-box;
 	background-color: green;
 }
@@ -85,6 +173,7 @@ section > div {
 	width: 50%;
     height: 100%;
     float: left;
+    box-sizing: border-box;
 }
 
 section > div + div {
@@ -98,10 +187,17 @@ section > div > div{
 
 section div:has(> h1) {
 	position: relative;
+    padding: 0 0 0 var(--sideg);
+    box-sizing: border-box;
+}
+
+section div + div > div:has(> h1) {
+	position: relative;
+    padding: 0 var(--sideg) 0 0 ;
 }
 
 section div:has(> h1):hover:before {
-	opacity: 1;
+	opacity: 0.5;
 }
 
 section div:has(> h1):before {
@@ -116,35 +212,18 @@ section div:has(> h1):before {
     transition: opacity .5s linear;
 }
 
-@keyframes flash {
-  to {opacity: 0.5;}
-}
-
 section > div h1 {
-	margin: auto;
+	margin: auto 10%;
     top: 0;
     bottom: 0;
     position: absolute;
     height: fit-content;
+    
 }
 
 </style>
 </head>
 <body>
-  <nav>
-  	<div>
-     <div>
-       Logo
-     </div>
-    </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Connections</a></li>
-	  <li><a href="#">Connections</a></li>
-    </ul>
-  </nav>
   <section>
     <div>
     <h1><p>Hi</p><p>I'm Lewis Macdonald</p><p>Welcome to my portfolio</p></h1>
@@ -158,5 +237,31 @@ section > div h1 {
       </div>
     </div>
   </section>
+  <nav>
+  	<div>
+     <div>
+       Logo
+     </div>
+    </div>
+    <div>
+      <ul>
+      	<div></div>
+        <li><a href="#">Home</a></li>
+        <div></div>
+        <div></div>
+        <li><a href="#">About</a></li>
+        <div></div>
+        <div></div>
+        <li><a href="#">Projects</a></li>
+        <div></div>
+        <div></div>
+        <li><a href="#">Connections</a></li>
+        <div></div>
+        <div></div>
+        <li><a href="#">CV</a></li>
+        <div></div>
+      </ul>
+    </div>
+  </nav>
 </body>
 </html>
