@@ -186,7 +186,7 @@ a {
  text-decoration: none;
 }
 
-section {
+.homepageBanner {
 	width: 100%;
     position: relative;
 	max-height: 100%;
@@ -196,7 +196,7 @@ section {
 	background-color: green;
 }
 
-section > div:last-child {
+.homepageBanner > div:last-child {
 	position: absolute;
     width: 100%;
     height: 100%;
@@ -207,38 +207,38 @@ section > div:last-child {
     -webkit-clip-path: circle(50% at 50% 50%);*/
 }
 
-section > div {
+.homepageBanner > div {
 	width: 50%;
     height: 100%;
     float: left;
     box-sizing: border-box;
 }
 
-section > div + div {
+.homepageBanner > div + div {
 	float: right;
 }
 
-section > div > div{
+.homepageBanner > div > div{
 	width: 100%;
     height: 50%;
 }
 
-section div:has(> h1) {
+.homepageBanner div:has(> h1) {
 	position: relative;
     padding: 0 0 0 var(--sideg);
     box-sizing: border-box;
 }
 
-section div + div > div:has(> h1) {
+.homepageBanner div + div > div:has(> h1) {
 	position: relative;
     padding: 0 var(--sideg) 0 0 ;
 }
 
-section div:has(> h1):hover:before {
+.homepageBanner div:has(> h1):hover:before {
 	opacity: 0.5;
 }
 
-section div:has(> h1):before {
+.homepageBanner div:has(> h1):before {
 	content: "";
     opacity: 0;
     background-color: white;
@@ -250,7 +250,7 @@ section div:has(> h1):before {
     transition: opacity .5s linear;
 }
 
-section > div h1 {
+.homepageBanner > div h1 {
 	margin: auto 10%;
     top: 0;
     bottom: 0;
@@ -259,37 +259,58 @@ section > div h1 {
     
 }
 
+.waves {
+	transform: scaleX(0.2);
+}
+
+.waveRight {
+	transform: scaleX(-1) translateX(0);
+	transform: scaleX(-0.2) translateX(-200%);
+    transform-origin: center
+}
+
+.wavesSVG {
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+
+section:has(.homepageBanner) {
+	position:relative;
+}
+
 </style>
 </head>
 <body>
   <section>
-    <div>
-    <h1><p>Hi</p><p>I'm Lewis Macdonald</p><p>Welcome to my portfolio</p></h1>
-    </div>
-    <div>
+    <article class="homepageBanner">
       <div>
-		<h1><p>Full-Stack developer</p></h1>
+      <h1><p>Hi</p><p>I'm Lewis Macdonald</p><p>Welcome to my portfolio</p></h1>
       </div>
       <div>
-		<h1><p>Programmer</p></h1>
+        <div>
+          <h1><p>Full-Stack developer</p></h1>
+        </div>
+        <div>
+          <h1><p>Programmer</p></h1>
+        </div>
       </div>
-    </div>
-    <div></div>
-  </section>
-  
-  <svg width="100%" height="100%">
-    <defs width="100%" height="100%">
+      <div></div>
+    </article>
+    <svg class="wavesSVG" width="100%" height="100%" viewbox="0 0 1 1" vector-effect="non-scaling-stroke">
+    <defs>
     	<symbol>
-        	<path id="mypath" d="M 245 600 L 247.7 580 C 250.3 560 255.7 520 230.5 480 C 205.3 440 149.7 400 128.5 360 C 107.3 320 120.7 280 129.3 240 C 138 200 142 160 134.5 120 C 127 80 108 40 98.5 20 L 89 0 L 0 0 L 0 20 C 0 40 0 80 0 120 C 0 160 0 200 0 240 C 0 280 0 320 0 360 C 0 400 0 440 0 480 C 0 520 0 560 0 580 L 0 600 Z" />
+        	<path id="mypath" d="M 0.3981 1 C 0.4067 0.91 0.4155 0.845 0.3746 0.78 C 0.3336 0.715 0.2433 0.65 0.2088 0.585 C 0.1744 0.52 0.1961 0.455 0.2101 0.39 C 0.2243 0.325 0.2307 0.26 0.2186 0.195 C 0.2064 0.13 0.1755 0.065 0.1601 0.0325 L 0.1446 0 L 0 0 L 0 0.0325 C 0 0.065 0 0.13 0 0.195 C 0 0.26 0 0.325 0 0.39 C 0 0.455 0 0.52 0 0.585 C 0 0.65 0 0.715 0 0.78 C 0 0.845 0 0.91 0 0.9425 L 0 1 Z" x="-100" y="0"/>
         </symbol>
     </defs>
-    <defs width="100%" height="100%">
-      <clipPath width="100%" height="100%" id="myClip">
-        <use href="#mypath" x="0" y="0" />
-        <use href="#mypath" transform="scale(-1 1) translate(0 0)" transform-origin= "center"  x="0" y="0" />
+      <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+        <use class="waves" href="#mypath" x="0" y="0"/>
+        <use class="waves waveRight" href="#mypath" x="0" y="0"/>
       </clipPath>
-    </defs>
   </svg>
+  </section>
+  
+  
   <nav>
   	<div>
      <div>
