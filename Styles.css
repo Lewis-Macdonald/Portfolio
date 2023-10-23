@@ -127,7 +127,7 @@ nav > div {
 	opacity: 0.5;
 }
 
-sidebarList *:has(> a):has(+ * + * + *):after {
+.sidebarList *:has(> a):has(+ * + * + *):after {
 	content: "";
 	background: hsl(0, 0%, 80%);
     width: 100%;
@@ -155,11 +155,11 @@ sidebarList *:has(> a):has(+ * + * + *):after {
 	opacity: 0.5;
 }
 
-sidebarList a::after {
+.sidebarList a::after {
   content: attr(href);
 }
 
-sidebarList a {
+.sidebarList a {
 	position: inherit;
     height: 100%;
     display: flex;
