@@ -57,7 +57,7 @@ nav > div {
   -webkit-mask-image: -webkit-linear-gradient(0deg,rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0));
 }
 
-sidebarList ul {
+.sidebarList ul {
     position: absolute;
     list-style-type: none;
     box-sizing: border-box;
@@ -76,7 +76,7 @@ sidebarList ul {
     right: 0;
 }
 
-sidebarList li {
+.sidebarList li {
     padding: 0.5em;
     width: 100%;
     box-sizing: border-box;
