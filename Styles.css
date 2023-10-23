@@ -31,7 +31,7 @@ body {
     flex-direction: column;
 }
 
-nav > div {
+.sidebar > div {
   aspect-ratio: 1 / 1;
   position: relative;
   width: 100%;
