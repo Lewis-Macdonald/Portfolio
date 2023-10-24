@@ -88,7 +88,7 @@ body {
 }
 
 
-.sidebarList div :before, .sidebarList li:before{
+.sidebarList div:before, .sidebarList li:before{
     content: "";
     opacity: 0;
     background-color: white;
@@ -127,20 +127,6 @@ body {
 	opacity: 0.5;
 }
 
-.sidebarList *:has(> a):has(+ * + * + *):after {
-	content: "";
-	background: hsl(0, 0%, 80%);
-    width: 100%;
-    display: block;
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 5px;
-    position: absolute;
-}
-
-
-
 /*centre nav bar*/
 
 .F:hover + .M:before {
@@ -153,6 +139,18 @@ body {
 
 .M:has(+ .L:hover):before {
 	opacity: 0.5;
+}
+
+.sidebarList *:has(> a):has(+ * + * + *):after {
+	content: "";
+	background: hsl(0, 0%, 80%);
+    width: 100%;
+    display: block;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    position: absolute;
 }
 
 .sidebarList .M a::after {
