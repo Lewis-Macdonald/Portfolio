@@ -50,6 +50,7 @@ body {
 }
 
 .sidebarList {
+	position: relative;
 	flex-grow: 1;
     background: rgba(255,255,255,0.5);
     background-opacity: 0.5;
@@ -216,11 +217,11 @@ a {
     box-sizing: border-box;
 }
 
-.bannerLeft .bannerItem {
+.bannerLeft .bannerItem, :is(.bannerLeft, .bannerItem) {
     padding: 0 0 0 var(--sideg);
 }
 
-.bannerRight .bannerItem {
+.bannerRight .bannerItem, :is(.bannerRight, .bannerItem) {
     padding: 0 var(--sideg) 0 0 ;
 }
 
