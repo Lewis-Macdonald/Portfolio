@@ -31,7 +31,7 @@ body {
     flex-direction: column;
 }
 
-nav > div {
+.sidebarHeader {
   aspect-ratio: 1 / 1;
   position: relative;
   width: 100%;
@@ -50,6 +50,7 @@ nav > div {
 }
 
 .sidebarList {
+	position: relative;
 	flex-grow: 1;
     background: rgba(255,255,255,0.5);
     background-opacity: 0.5;
@@ -88,7 +89,7 @@ nav > div {
 }
 
 
-.sidebarList div :before, .sidebarList li:before{
+.sidebarList div:before, .sidebarList li:before{
     content: "";
     opacity: 0;
     background-color: white;
@@ -127,20 +128,6 @@ nav > div {
 	opacity: 0.5;
 }
 
-.sidebarList *:has(> a):has(+ * + * + *):after {
-	content: "";
-	background: hsl(0, 0%, 80%);
-    width: 100%;
-    display: block;
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 5px;
-    position: absolute;
-}
-
-
-
 /*centre nav bar*/
 
 .F:hover + .M:before {
@@ -155,7 +142,19 @@ nav > div {
 	opacity: 0.5;
 }
 
-.sidebarList a::after {
+.sidebarList *:has(> a):has(+ * + * + *):after {
+	content: "";
+	background: hsl(0, 0%, 80%);
+    width: 100%;
+    display: block;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    position: absolute;
+}
+
+.sidebarList .M a::after {
   content: attr(href);
 }
 
@@ -187,8 +186,8 @@ a {
 	background-color: green;
 }
 
-.homepageBanner > div {
-    width: 50%;
+.homepageBanner > *:last-child {
+    width: 100%;
     height: 100%;
 	background: var(--background);
     clip-path: url(#myClip);
@@ -213,16 +212,17 @@ a {
     height: 50%;
 }
 
-.bannerLeft .bannerItem {
+.bannerItem {
 	position: relative;
-    padding: 0 0 0 var(--sideg);
     box-sizing: border-box;
 }
 
-.bannerRight .bannerItem {
-	position: relative;
+.bannerLeft .bannerItem, .bannerLeft.bannerItem {
+    padding: 0 0 0 var(--sideg);
+}
+
+.bannerRight .bannerItem, .bannerRight.bannerItem {
     padding: 0 var(--sideg) 0 0 ;
- box-sizing: border-box;
 }
 
 .bannerItem:hover:before {
