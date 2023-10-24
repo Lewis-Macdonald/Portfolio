@@ -31,7 +31,7 @@ body {
     flex-direction: column;
 }
 
-.sidebar > div {
+.sidebarHeader {
   aspect-ratio: 1 / 1;
   position: relative;
   width: 100%;
