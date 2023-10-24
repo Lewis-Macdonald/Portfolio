@@ -155,7 +155,7 @@ body {
 	opacity: 0.5;
 }
 
-.sidebarList a::after {
+.sidebarList .M a::after {
   content: attr(href);
 }
 
