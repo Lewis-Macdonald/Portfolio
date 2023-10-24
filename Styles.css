@@ -267,7 +267,7 @@ a {
     pointer-events: none;
 }
 
-main {
+.main {
 	position:relative;
 	height: 100%;
 }
