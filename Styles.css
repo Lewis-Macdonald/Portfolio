@@ -217,11 +217,11 @@ a {
     box-sizing: border-box;
 }
 
-.bannerLeft .bannerItem, :is(.bannerLeft .bannerItem) {
+.bannerLeft .bannerItem, .bannerLeft.bannerItem {
     padding: 0 0 0 var(--sideg);
 }
 
-.bannerRight .bannerItem, :is(.bannerRight .bannerItem) {
+.bannerRight .bannerItem, .bannerRight.bannerItem {
     padding: 0 var(--sideg) 0 0 ;
 }
 
