@@ -32,7 +32,7 @@ function ReadFile(name, callback)
 
   // open the file
   xhr.open("GET", filePath, true);
-  xhr.withCredentials = true;
+  xhr.withCredentials = false;
   // specify the response type as text
   xhr.responseType = "blob";
 
