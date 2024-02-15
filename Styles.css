@@ -78,7 +78,7 @@ body {
 }
 
 .sidebarList li {
-    padding: 0.5em;
+    /*padding: 0.5em;*/
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -145,25 +145,25 @@ body {
 .sidebarList *:has(> a):has(+ * + * + *):after {
 	content: "";
 	background: hsl(0, 0%, 80%);
-    width: 100%;
-    display: block;
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 5px;
-    position: absolute;
+  width: 100%;
+  display: block;
+  left:0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  position: absolute;
 }
 
 .sidebarList .M a::after {
-  content: attr(href);
+  /*content: attr(href);*/
 }
 
 .sidebarList a {
 	position: inherit;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .M + .M {
@@ -247,7 +247,7 @@ a {
     bottom: 0;
     position: absolute;
     height: fit-content;
-    
+
 }
 
 .waves {
