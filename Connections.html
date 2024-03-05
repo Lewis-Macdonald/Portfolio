@@ -3,10 +3,281 @@
    <head>
       <title>Lewis Macdonald Portfolio</title>
       <link rel="stylesheet" href="Styles.css">
+      <style>
+
+        .main {
+          background-image: url('vecteezy_blue-watercolor-texture_4684818.jpg');
+          background-size: cover;
+          background-position: center center;
+        }
+
+        #ConnectionHeaderText {
+          font-style: italic;
+          width: max-content;
+          height:100%;
+          display: flex;
+          height: fit-content;
+          margin: 0 20px;
+        }
+
+        #ConnectionHeaderText::before, #ConnectionHeaderText::after {
+          content: "";
+          background-color: lightgreen;
+          width: 10px;
+        }
+
+        #ConnectionHeaderText:before, #ConnectionHeaderText:after {
+          /*content: "";
+          background-color: cyan;
+          width: 10px;*/
+        }
+
+        #ConnectionHeaderText:after {
+          /*content: "";
+          background-color: lime;
+          width: 10px;*/
+        }
+
+        #ConnectionHeaderText * {
+          margin: auto;
+          height:max-content;
+          /*font-size: 8cqw!important;*/
+          font-size: max(8cqw, 6em);
+          padding: 0px 25px;
+          position: unset;
+
+        }
+
+        #ConnectionsHeader > div {
+          position: relative;
+          min-width: 1000px;
+          mask: url("HeaderArrow.svg") center no-repeat;
+          mask-size: cover;
+        }
+
+        div:has(>.ConnectionsHeaderContent) {
+          /*position: absolute;*/
+          justify-content: flex-end;
+          top: 0;
+          bottom: 0;
+          padding: 1% 0;
+          contain: size;
+        }
+
+        div:has(>#ConnectionLogos) {
+          justify-content: flex-end;
+          /*position:absolute;*/
+        }
+
+        div:has(>#ConnectionHeaderText) {
+          justify-content: center;
+          height: fit-content;
+          padding: 0 0!important;
+          position: initial;
+          contain:none;
+        }
+
+        div:has(>#ConnectionInformation) {
+          justify-content: flex-start;
+          /*position:absolute;*/
+        }
+
+        #ConnectionLogos {
+          /*display: flex;
+          flex-direction: column;
+          justify-content: space-between;*/
+        }
+
+        #ConnectionLogos img {
+          height: 40%;
+          display: block;
+          right: 0;
+        }
+
+        #ConnectionLogos img:last-child {
+          bottom: 0;
+        }
+
+        #ConnectionInformation {
+          /*display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;*/
+        }
+
+        #ConnectionInformation *:is(h1, h2, h3, h4, h5, h6) {
+          margin: 0;
+          color: white;
+        }
+
+        #ConnectionInformation > *:last-child {
+          bottom: 0;
+        }
+
+        #ConnectionsHeader {
+          min-width: min-content;
+          background-color: darkgreen;
+          padding: 2em 0;
+          box-sizing: border-box;
+          mask: url("HeaderArrow.svg") center no-repeat;
+          mask-size: cover;
+        }
+
+        .ConnectionsHeaderContent {
+          position: relative;
+          height: 100%;
+          width: -webkit-fill-available;
+        }
+
+        .ConnectionsHeaderContent > * {
+          position: absolute;
+        }
+
+        .Flex {
+          display: flex;
+          justify-content: space-between;
+          align-items: stretch;
+        }
+
+        .FlexDown {
+          flex-direction: column;
+        }
+
+        .FlexLeft {
+          @extend .Flex;
+          align-items: flex-start;
+        }
+
+        .FlexRight {
+          @extend .Flex;
+          align-items: flex-end;
+        }
+
+        .FlexGrow {
+          flex: 1;
+        }
+
+        #ConnectionsMain{
+          min-width: 1000px;
+          width: min-content;
+          margin: auto;
+          height: -webkit-fill-available;
+          padding: 2em 0;
+          display: flex;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /*height: -webkit-fill-available;
+          padding: 2em 0%;
+          margin: auto;
+          margin-left: calc(max(270px, 25%)); /*1016 px wide*/
+          /*margin-right: auto;
+          width: max(250px, calc(1 * (100%/2 - 270px)));*/
+        }
+
+        #ConnectionsMain > * {
+          width: max(460px, 39vw);
+          background-color: lightgray;
+          height: 75%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        #EmailForm {
+          container: my-layout / size;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+        }
+
+        #EmailForm > input[type="submit"] {
+          align-self: flex-end;
+        }
+
+        #EmailForm > * {
+          width: 100%;
+        }
+
+        *:has(>#EmailForm) > * {
+          padding: 10px;
+          margin:0;
+        }
+
+        *:has(>#EmailForm) > h2 {
+          background-color: lightgreen;
+        }
+
+        #EmailForm * {
+          margin-bottom: 2%;
+          font-size: larger;
+          resize: none;
+        }
+
+        textarea[name="EMessage"] {
+          color: red;
+          flex: 1;
+          font-family: Arial;
+          padding: 1px 0px;
+          padding-block: 1px;
+          padding-inline: 2px;
+        }
+
+        #EmailForm *[type="Submit"] {
+          width:min-content;
+          background-color: lightgreen;
+          border: none;
+          padding: 5px;
+        }
+
+        #EmailForm *[type="Submit"]::before {
+          content: "a";
+        }
+      </style>
    </head>
    <body>
-      <section class="main">
-        About
+      <section class="main Flex FlexDown">
+        <header id="ConnectionsHeader">
+          <div class="Flex">
+            <div class="Flex FlexGrow">
+              <div id="ConnectionLogos" class="FlexRight ConnectionsHeaderContent">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-1024x1024-net2o24e.png">
+                <img src="https://static-00.iconduck.com/assets.00/github-icon-256x249-7imgj54m.png">
+              </div>
+            </div>
+            <div class="Flex FlexGrow">
+              <div id="ConnectionHeaderText" class="ConnectionsHeaderContent">
+                <h1>
+                  Contact Me
+                </h1>
+              </div>
+            </div>
+            <div class="Flex FlexGrow">
+              <div id="ConnectionInformation" class="FlexLeft ConnectionsHeaderContent">
+                <div>
+                  <h3>Email</h3>
+                  <h4>example@gmail.com</h4>
+                </div>
+                <div>
+                  <h3>Phone</h3>
+                  <h4>xxxx xxx xxxx</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <article id="ConnectionsMain">
+          <div>
+            <h2>Send A Message</h2>
+            <form id="EmailForm">
+              <input type="text" id="EName" name="EName" placeholder="Name"/>
+              <input type="text" id="EAddress" name="EAddress" placeholder="Email Address"/>
+              <input type="text" id="ESubject" name="ESubject" placeholder="Subject"/>
+              <textarea id="EMessage" name="EMessage" placeholder="Email Message"  rows="4" cols="50"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </article>
       </section>
       <nav class="sidebar">
       </nav>
