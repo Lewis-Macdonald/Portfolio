@@ -3,10 +3,133 @@
    <head>
       <title>Lewis Macdonald Portfolio</title>
       <link rel="stylesheet" href="Styles.css">
+      <style>
+        body {
+          /*background: white;*/
+        }
+
+        .ProjectspageBanner {
+          display: flex;
+          flex-direction: column;
+          aspect-ratio: 2 / 1;
+          justify-content: space-evenly;
+          background-color: green;
+        }
+
+        .ProjectspageBanner > .bannerItem {
+          flex-grow: 1;
+        }
+
+        .ProjectspageBanner .bannerItem > * {
+          width: 50%;
+          max-width: 50%;
+          box-sizing: border-box;
+          display:inline-block;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .ProjectspageBanner .bannerItem > div {
+          padding: 0 0 0 var(--sideg);
+          float: left;
+        }
+
+        .ProjectspageBanner .bannerItem > aside {
+          padding: 0 var(--sideg) 0 0;
+          float: right;
+        }
+
+        .ProjectspageBanner .bannerItem > * > * {
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          margin: auto 10%;
+          height: fit-content;
+          width: inherit;
+          text-align: center;
+          max-height: 90%;
+          overflow: auto;
+        }
+
+        .ProjectspageBanner .bannerItem > div > *{
+          right: 0;
+        }
+
+        .ProjectspageBanner .bannerItem > aside > * {
+          left: 0;
+          transform: translate(-150%, 0);
+          transition-duration: 0.2s;
+          transition-timing-function: ease-in-out;
+        }
+
+        .bannerItem:hover aside > *{
+          transform: translate(0%, 0);
+        }
+
+        .bannerItem ::-webkit-scrollbar {
+          width: 20px;
+        }
+
+        .bannerItem ::-webkit-scrollbar-track {
+          /*box-shadow: inset 0 0 5px grey;*/
+          border-radius: 10px;
+        }
+
+        .bannerItem ::-webkit-scrollbar-thumb {
+          background: lime;
+          border-radius: 10px;
+          height: 0px;
+        }
+
+        /*::-webkit-scrollbar the scrollbar.
+        ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+        ::-webkit-scrollbar-thumb the draggable scrolling handle.
+        ::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+        ::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+        ::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+        ::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+        */
+        .ProjectspageBanner a {
+          background-color: hsla(200, 50%, 70%, 0.5);
+          color: blue;
+          width: 100%;
+          padding: 1em 0 1em 0;
+          display: block;
+          margin-bottom: 16px;
+        }
+      </style>
    </head>
    <body>
       <section class="main">
-        About
+        <article class="ProjectspageBanner">
+          <div class="bannerItem">
+            <div style="">
+              <h1>Web Development</h1>
+            </div>
+            <aside>
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="">Read More</a>
+              </div>
+            </aside>
+          </div>
+          <div class="bannerItem">
+            <div>
+              <h1>Programming</h1>
+            </div>
+            <aside>
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="">Read More</a>
+              <div>
+            </aside>
+          </div>
+        </article>
       </section>
       <nav class="sidebar">
       </nav>
